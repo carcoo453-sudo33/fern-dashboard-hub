@@ -2,95 +2,94 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
-
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Fern Palette - Forest green tones */
+    --fern-50: 140 30% 96%;
+    --fern-100: 142 28% 90%;
+    --fern-200: 144 26% 80%;
+    --fern-300: 146 24% 65%;
+    --fern-400: 148 22% 50%;
+    --fern-500: 150 25% 40%;
+    --fern-600: 152 28% 32%;
+    --fern-700: 154 32% 24%;
+    --fern-800: 156 36% 18%;
+    --fern-900: 158 40% 12%;
+    --fern-950: 160 45% 8%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    /* Semantic tokens using Fern palette */
+    --background: 158 40% 12%;
+    --foreground: 140 30% 96%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --card: 156 36% 18%;
+    --card-foreground: 140 30% 96%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    --popover: 156 36% 18%;
+    --popover-foreground: 140 30% 96%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --primary: 148 22% 50%;
+    --primary-foreground: 160 45% 8%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --secondary: 154 32% 24%;
+    --secondary-foreground: 140 30% 96%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --muted: 154 32% 24%;
+    --muted-foreground: 144 26% 80%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --accent: 146 24% 65%;
+    --accent-foreground: 160 45% 8%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 140 30% 96%;
 
-    --radius: 0.5rem;
+    --border: 156 36% 22%;
+    --input: 156 36% 22%;
+    --ring: 148 22% 50%;
 
-    --sidebar-background: 0 0% 98%;
+    --radius: 0.75rem;
 
-    --sidebar-foreground: 240 5.3% 26.1%;
+    /* Dashboard specific */
+    --card-shadow: 0 4px 20px rgba(0, 0, 0, 0.35);
+    --card-shadow-hover: 0 8px 30px rgba(0, 0, 0, 0.45);
 
-    --sidebar-primary: 240 5.9% 10%;
+    /* Status colors */
+    --success: 142 76% 36%;
+    --success-foreground: 140 30% 96%;
+    --warning: 38 92% 50%;
+    --warning-foreground: 160 45% 8%;
+    --info: 199 89% 48%;
+    --info-foreground: 160 45% 8%;
 
-    --sidebar-primary-foreground: 0 0% 98%;
-
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --sidebar-background: 158 40% 12%;
+    --sidebar-foreground: 140 30% 96%;
+    --sidebar-primary: 148 22% 50%;
+    --sidebar-primary-foreground: 160 45% 8%;
+    --sidebar-accent: 154 32% 24%;
+    --sidebar-accent-foreground: 140 30% 96%;
+    --sidebar-border: 156 36% 22%;
+    --sidebar-ring: 148 22% 50%;
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
-
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
-
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
-
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
-
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
-
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
-
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
-
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --background: 158 40% 12%;
+    --foreground: 140 30% 96%;
+    --card: 156 36% 18%;
+    --card-foreground: 140 30% 96%;
+    --popover: 156 36% 18%;
+    --popover-foreground: 140 30% 96%;
+    --primary: 148 22% 50%;
+    --primary-foreground: 160 45% 8%;
+    --secondary: 154 32% 24%;
+    --secondary-foreground: 140 30% 96%;
+    --muted: 154 32% 24%;
+    --muted-foreground: 144 26% 80%;
+    --accent: 146 24% 65%;
+    --accent-foreground: 160 45% 8%;
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 140 30% 96%;
+    --border: 156 36% 22%;
+    --input: 156 36% 22%;
+    --ring: 148 22% 50%;
   }
 }
 
@@ -100,6 +99,67 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground antialiased;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
+
+@layer components {
+  .dashboard-card {
+    @apply bg-card border border-border rounded-xl p-6;
+    box-shadow: var(--card-shadow);
+    transition: box-shadow 0.2s ease, transform 0.2s ease;
+  }
+
+  .dashboard-card:hover {
+    box-shadow: var(--card-shadow-hover);
+  }
+
+  .kpi-card {
+    @apply dashboard-card flex items-start gap-4;
+  }
+
+  .kpi-icon {
+    @apply p-3 rounded-lg bg-secondary/50;
+  }
+
+  .kpi-value {
+    @apply text-3xl font-bold tracking-tight text-foreground;
+  }
+
+  .kpi-label {
+    @apply text-sm text-muted-foreground font-medium;
+  }
+
+  .kpi-trend {
+    @apply text-xs font-medium flex items-center gap-1 mt-1;
+  }
+
+  .kpi-trend-up {
+    @apply text-[hsl(var(--success))];
+  }
+
+  .kpi-trend-down {
+    @apply text-[hsl(var(--destructive))];
+  }
+
+  .status-badge {
+    @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium;
+  }
+
+  .status-active {
+    @apply bg-[hsl(var(--success)/0.15)] text-[hsl(var(--success))];
+  }
+
+  .status-pending {
+    @apply bg-[hsl(var(--warning)/0.15)] text-[hsl(var(--warning))];
+  }
+
+  .status-completed {
+    @apply bg-[hsl(var(--primary)/0.15)] text-[hsl(var(--primary))];
+  }
+
+  .status-draft {
+    @apply bg-muted text-muted-foreground;
   }
 }
