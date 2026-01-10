@@ -4,92 +4,94 @@
 
 @layer base {
   :root {
-    /* Fern Palette - Forest green tones */
-    --fern-50: 140 30% 96%;
-    --fern-100: 142 28% 90%;
-    --fern-200: 144 26% 80%;
-    --fern-300: 146 24% 65%;
-    --fern-400: 148 22% 50%;
-    --fern-500: 150 25% 40%;
-    --fern-600: 152 28% 32%;
-    --fern-700: 154 32% 24%;
-    --fern-800: 156 36% 18%;
-    --fern-900: 158 40% 12%;
-    --fern-950: 160 45% 8%;
+    /* Fern Palette - Exact HEX values converted to HSL */
+    --fern-50: 132 47% 96%;
+    --fern-100: 134 42% 90%;
+    --fern-200: 138 38% 80%;
+    --fern-300: 142 40% 67%;
+    --fern-400: 146 36% 53%;
+    --fern-500: 150 48% 39%;
+    --fern-600: 152 53% 31%;
+    --fern-700: 154 52% 24%;
+    --fern-800: 156 50% 20%;
+    --fern-900: 158 47% 16%;
+    --fern-950: 156 55% 9%;
 
-    /* Semantic tokens using Fern palette */
-    --background: 158 40% 12%;
-    --foreground: 140 30% 96%;
+    /* Semantic tokens - Dark theme */
+    --background: 156 55% 9%;
+    --foreground: 132 47% 96%;
 
-    --card: 156 36% 18%;
-    --card-foreground: 140 30% 96%;
+    --card: 158 47% 16%;
+    --card-foreground: 132 47% 96%;
 
-    --popover: 156 36% 18%;
-    --popover-foreground: 140 30% 96%;
+    --popover: 158 47% 16%;
+    --popover-foreground: 132 47% 96%;
 
-    --primary: 148 22% 50%;
-    --primary-foreground: 160 45% 8%;
+    --primary: 150 48% 39%;
+    --primary-foreground: 156 55% 9%;
 
-    --secondary: 154 32% 24%;
-    --secondary-foreground: 140 30% 96%;
+    --secondary: 154 52% 24%;
+    --secondary-foreground: 132 47% 96%;
 
-    --muted: 154 32% 24%;
-    --muted-foreground: 144 26% 80%;
+    --muted: 154 52% 24%;
+    --muted-foreground: 138 38% 80%;
 
-    --accent: 146 24% 65%;
-    --accent-foreground: 160 45% 8%;
+    --accent: 146 36% 53%;
+    --accent-foreground: 156 55% 9%;
 
     --destructive: 0 72% 51%;
-    --destructive-foreground: 140 30% 96%;
+    --destructive-foreground: 132 47% 96%;
 
-    --border: 156 36% 22%;
-    --input: 156 36% 22%;
-    --ring: 148 22% 50%;
+    --border: 156 50% 20%;
+    --input: 156 50% 20%;
+    --ring: 150 48% 39%;
 
     --radius: 0.75rem;
 
     /* Dashboard specific */
     --card-shadow: 0 4px 20px rgba(0, 0, 0, 0.35);
     --card-shadow-hover: 0 8px 30px rgba(0, 0, 0, 0.45);
+    --navbar-blur: blur(12px);
 
     /* Status colors */
     --success: 142 76% 36%;
-    --success-foreground: 140 30% 96%;
+    --success-foreground: 132 47% 96%;
     --warning: 38 92% 50%;
-    --warning-foreground: 160 45% 8%;
+    --warning-foreground: 156 55% 9%;
     --info: 199 89% 48%;
-    --info-foreground: 160 45% 8%;
+    --info-foreground: 156 55% 9%;
 
-    --sidebar-background: 158 40% 12%;
-    --sidebar-foreground: 140 30% 96%;
-    --sidebar-primary: 148 22% 50%;
-    --sidebar-primary-foreground: 160 45% 8%;
-    --sidebar-accent: 154 32% 24%;
-    --sidebar-accent-foreground: 140 30% 96%;
-    --sidebar-border: 156 36% 22%;
-    --sidebar-ring: 148 22% 50%;
+    /* Sidebar */
+    --sidebar-background: 158 47% 16%;
+    --sidebar-foreground: 132 47% 96%;
+    --sidebar-primary: 150 48% 39%;
+    --sidebar-primary-foreground: 156 55% 9%;
+    --sidebar-accent: 154 52% 24%;
+    --sidebar-accent-foreground: 132 47% 96%;
+    --sidebar-border: 156 50% 20%;
+    --sidebar-ring: 150 48% 39%;
   }
 
   .dark {
-    --background: 158 40% 12%;
-    --foreground: 140 30% 96%;
-    --card: 156 36% 18%;
-    --card-foreground: 140 30% 96%;
-    --popover: 156 36% 18%;
-    --popover-foreground: 140 30% 96%;
-    --primary: 148 22% 50%;
-    --primary-foreground: 160 45% 8%;
-    --secondary: 154 32% 24%;
-    --secondary-foreground: 140 30% 96%;
-    --muted: 154 32% 24%;
-    --muted-foreground: 144 26% 80%;
-    --accent: 146 24% 65%;
-    --accent-foreground: 160 45% 8%;
+    --background: 156 55% 9%;
+    --foreground: 132 47% 96%;
+    --card: 158 47% 16%;
+    --card-foreground: 132 47% 96%;
+    --popover: 158 47% 16%;
+    --popover-foreground: 132 47% 96%;
+    --primary: 150 48% 39%;
+    --primary-foreground: 156 55% 9%;
+    --secondary: 154 52% 24%;
+    --secondary-foreground: 132 47% 96%;
+    --muted: 154 52% 24%;
+    --muted-foreground: 138 38% 80%;
+    --accent: 146 36% 53%;
+    --accent-foreground: 156 55% 9%;
     --destructive: 0 72% 51%;
-    --destructive-foreground: 140 30% 96%;
-    --border: 156 36% 22%;
-    --input: 156 36% 22%;
-    --ring: 148 22% 50%;
+    --destructive-foreground: 132 47% 96%;
+    --border: 156 50% 20%;
+    --input: 156 50% 20%;
+    --ring: 150 48% 39%;
   }
 }
 
@@ -105,6 +107,27 @@
 }
 
 @layer components {
+  /* Navbar styles */
+  .navbar {
+    @apply fixed top-4 left-1/2 -translate-x-1/2 z-50;
+    @apply bg-card/90 border border-border rounded-2xl;
+    @apply px-4 py-2;
+    backdrop-filter: var(--navbar-blur);
+    box-shadow: var(--card-shadow);
+  }
+
+  .navbar-link {
+    @apply px-4 py-2 text-sm font-medium text-muted-foreground rounded-lg;
+    @apply transition-colors duration-150;
+    @apply hover:text-foreground hover:bg-secondary/50;
+    @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring;
+  }
+
+  .navbar-link-active {
+    @apply text-foreground bg-secondary;
+  }
+
+  /* Dashboard card system */
   .dashboard-card {
     @apply bg-card border border-border rounded-xl p-6;
     box-shadow: var(--card-shadow);
@@ -115,12 +138,17 @@
     box-shadow: var(--card-shadow-hover);
   }
 
+  .dashboard-card-interactive:hover {
+    @apply translate-y-[-2px];
+  }
+
+  /* KPI card system */
   .kpi-card {
     @apply dashboard-card flex items-start gap-4;
   }
 
   .kpi-icon {
-    @apply p-3 rounded-lg bg-secondary/50;
+    @apply p-3 rounded-lg bg-primary/15;
   }
 
   .kpi-value {
@@ -143,6 +171,7 @@
     @apply text-[hsl(var(--destructive))];
   }
 
+  /* Status badges */
   .status-badge {
     @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium;
   }
@@ -156,10 +185,16 @@
   }
 
   .status-completed {
-    @apply bg-[hsl(var(--primary)/0.15)] text-[hsl(var(--primary))];
+    @apply bg-primary/15 text-primary;
   }
 
   .status-draft {
     @apply bg-muted text-muted-foreground;
+  }
+
+  /* Notification dot */
+  .notification-dot {
+    @apply absolute -top-1 -right-1 w-2.5 h-2.5 bg-destructive rounded-full;
+    @apply animate-pulse;
   }
 }

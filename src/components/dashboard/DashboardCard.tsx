@@ -1,4 +1,4 @@
-import { memo, ReactNode } from "react";
+import { memo, ReactNode, CSSProperties } from "react";
 import { cn } from "@/lib/utils";
 
 interface DashboardCardProps {
@@ -7,18 +7,27 @@ interface DashboardCardProps {
   title?: string;
   description?: string;
   action?: ReactNode;
+  interactive?: boolean;
+  style?: CSSProperties;
 }
 
 export const DashboardCard = memo(function DashboardCard({
   children,
   className,
+  style,
   title,
   description,
   action,
+  interactive = false,
 }: DashboardCardProps) {
   return (
     <section
-      className={cn("dashboard-card", className)}
+      className={cn(
+        "dashboard-card",
+        interactive && "dashboard-card-interactive cursor-pointer",
+        className
+      )}
+      style={style}
       aria-label={title}
     >
       {(title || action) && (

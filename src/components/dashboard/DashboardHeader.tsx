@@ -1,15 +1,19 @@
 import { memo } from "react";
 import { Button } from "@/components/ui/button";
-import { Bell, Settings, Plus } from "lucide-react";
+import { Bell, Plus } from "lucide-react";
 
 interface DashboardHeaderProps {
   title: string;
   subtitle?: string;
+  onNewCourse?: () => void;
+  onNotifications?: () => void;
 }
 
 export const DashboardHeader = memo(function DashboardHeader({
   title,
   subtitle,
+  onNewCourse,
+  onNotifications,
 }: DashboardHeaderProps) {
   return (
     <header className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-8">
@@ -26,20 +30,16 @@ export const DashboardHeader = memo(function DashboardHeader({
         <Button
           variant="outline"
           size="icon"
-          className="border-border hover:bg-secondary"
-          aria-label="Notifications"
+          className="border-border hover:bg-secondary sm:hidden"
+          onClick={onNotifications}
+          aria-label="View notifications"
         >
           <Bell className="w-4 h-4" />
         </Button>
         <Button
-          variant="outline"
-          size="icon"
-          className="border-border hover:bg-secondary"
-          aria-label="Settings"
+          onClick={onNewCourse}
+          className="bg-primary text-primary-foreground hover:bg-primary/90"
         >
-          <Settings className="w-4 h-4" />
-        </Button>
-        <Button className="bg-primary text-primary-foreground hover:bg-primary/90">
           <Plus className="w-4 h-4 mr-2" />
           New Course
         </Button>
