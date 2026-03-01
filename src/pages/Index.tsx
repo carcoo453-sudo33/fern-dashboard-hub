@@ -31,7 +31,11 @@ const Dashboard = () => {
         onOpenChange={setNewCourseOpen}
       />
 
-      <main className="min-h-screen bg-background px-4 pb-4 pt-28 sm:px-6 sm:pb-6 lg:px-8 lg:pb-8">
+      <a href="#main-content" className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-[100] focus:px-4 focus:py-2 focus:bg-primary focus:text-primary-foreground focus:rounded-lg">
+        Skip to main content
+      </a>
+
+      <main id="main-content" className="min-h-screen bg-background px-4 pb-4 pt-28 sm:px-6 sm:pb-6 lg:px-8 lg:pb-8">
         <div className="max-w-7xl mx-auto">
           <DashboardHeader
             title="Dashboard"
