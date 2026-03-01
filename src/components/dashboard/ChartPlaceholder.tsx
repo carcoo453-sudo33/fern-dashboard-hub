@@ -27,9 +27,9 @@ export const ChartPlaceholder = memo(function ChartPlaceholder({
       }
     >
       <div className="flex flex-col items-center justify-center h-48 rounded-lg bg-secondary/30 border border-dashed border-border">
-        <Icon className="w-10 h-10 text-muted-foreground/50 mb-3" aria-hidden="true" />
+        <Icon className="w-10 h-10 text-muted-foreground mb-3" aria-hidden="true" />
         <p className="text-sm text-muted-foreground">Chart visualization</p>
-        <p className="text-xs text-muted-foreground/70 mt-1">Data will appear here</p>
+        <p className="text-xs text-muted-foreground mt-1">Data will appear here</p>
       </div>
     </DashboardCard>
   );
